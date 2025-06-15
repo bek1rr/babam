@@ -41,52 +41,56 @@
       position: relative;
     }
 
-    /* Yıldırım efektleri */
-    .lightning {
+    /* Gerçekçi yıldırım animasyonu */
+    .flash {
       position: absolute;
-      width: 5px;
-      height: 1000vh;
+      width: 2px;
+      height: 100vh;
       background: white;
-      animation: flash 1s infinite;
-      opacity: 0.5;
+      top: 0;
+      opacity: 0;
+      animation: lightningFlash 5s infinite;
     }
 
-    .lightning:nth-child(1) {
-      left: 30%;
-      animation-delay: 0s;
+    .flash:nth-child(1) {
+      left: 25%;
+      animation-delay: 1s;
     }
 
-    .lightning:nth-child(2) {
+    .flash:nth-child(2) {
       left: 50%;
-      animation-delay: 1.5s;
+      animation-delay: 2.7s;
     }
 
-    .lightning:nth-child(3) {
-      left: 80%;
-      animation-delay: 2.5s;
+    .flash:nth-child(3) {
+      left: 75%;
+      animation-delay: 4.3s;
     }
 
-    @keyframes flash {
-      0%, 100% {
-        opacity: 0.05;
-        height: 100vh;
+    @keyframes lightningFlash {
+      0%, 97%, 100% {
+        opacity: 0;
       }
-      50% {
-        opacity: 0.8;
+      98% {
+        opacity: 1;
         height: 100vh;
+        box-shadow: 0 0 20px white;
+      }
+      99% {
+        opacity: 0.6;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Yıldırım efektleri -->
-  <div class="lightning"></div>
-  <div class="lightning"></div>
-  <div class="lightning"></div>
+  <!-- Yıldırım çizgileri -->
+  <div class="flash"></div>
+  <div class="flash"></div>
+  <div class="flash"></div>
 
   <!-- Ana içerik -->
-  <img src="https://i.ibb.co/XYZABC/baba.jpg" alt="Babamla Birlikte"> <!-- ← sen buraya kendi görsel linkini eklemelisin -->
+  <img src="https://i.ibb.co/XYZABC/baba.jpg" alt="Babamla Birlikte"> <!-- ← Görsel linkini kendin koy -->
 
   <h1>Babalar Günü Kutlu Olsun!</h1>
 
